@@ -1,0 +1,8 @@
+So in short, ::before is used here to add a label automatically, making the code cleaner, reusable, and easier to manage. 
+With ::before:
+<span class="lbヘッダー_ログインユーザ"></span>
+Rendered as:
+ログインユーザ：
+Without ::before:
+<span class="lbヘッダー_ログインユーザ">ログインユーザ：</span>
+You’d have to manually write the label inside the HTML every time.
