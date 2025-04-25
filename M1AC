@@ -6,3 +6,11 @@ Rendered as:
 Without ::before:
 <span class="lbヘッダー_ログインユーザ">ログインユーザ：</span>
 You’d have to manually write the label inside the HTML every time.
+What is opacity in CSS?
+opacity controls how transparent or see-through an element is.
+
+opacity: 1 → Fully visible (100% solid)
+
+opacity: 0.5 → 50% transparent
+
+opacity: 0 → Invisible
