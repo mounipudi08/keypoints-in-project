@@ -62,4 +62,34 @@ You’re styling text-level elements like <span>, <a>, <strong>, etc.
 
 You want something to flow naturally with text (like adding an icon or label)
 
+🧱 Block elements
+Always start on a new line.
 
+Take full width (as wide as possible, left to right).
+
+Examples: <div>, <p>, <h1>, <hr>, <ul>, <li>, etc.
+
+👉 Think of them like big boxes stacked vertically.
+
+✏️ Inline elements
+Do not start a new line.
+
+Only take up as much width as needed.
+
+Examples: <span>, <a>, <strong>, <img>, <button>, etc.
+
+👉 Think of them like words inside a sentence — sitting next to each other.
+
+📸 Simple visual:
+
+HTML Element	Behavior
+<div>	Block (new line, full width)
+<hr>	Block (new line, separator line)
+<span>	Inline (no new line)
+<button>	Inline (sits beside spans)
+💡 In your case:
+<hr> is a block element → it forces a line break. (that's why the line and ヘルプ button go far apart!)
+
+<span> is inline → it stays in the same line.
+
+That’s why I told you: replace <hr> with <span> for the vertica
