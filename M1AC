@@ -14,3 +14,52 @@ opacity: 1 → Fully visible (100% solid)
 opacity: 0.5 → 50% transparent
 
 opacity: 0 → Invisible
+
+🔍 What does display: inline do?
+When an element has display: inline, it behaves like a piece of text:
+
+✅ Characteristics:
+Does not start on a new line
+➤ It flows with surrounding text.
+
+Respects width and height?
+❌ Nope! You can’t control width or height on inline elements — those values are ignored.
+
+Padding & margin?
+
+Vertical padding/margin (top/bottom): Often ignored or not fully applied.
+
+Horizontal padding/margin (left/right): Works.
+
+Takes up only as much space as its content needs.
+
+🧱 Examples:
+HTML:
+html
+Copy
+Edit
+<div style="border: 1px solid red; display: inline;">
+  Inline Box
+</div>
+<div style="border: 1px solid blue; display: inline;">
+  Another Box
+</div>
+✅ Output: These boxes will appear side by side, like text:
+
+pgsql
+Copy
+Edit
+[Inline Box][Another Box]
+❌ Why you don’t use inline when...
+You want to set a custom width/height
+
+You want vertical padding/margin to apply
+
+You want an element to act like a box or container
+
+✅ When to use inline
+You’re styling text-level elements like <span>, <a>, <strong>, etc.
+
+You want something to flow naturally with text (like adding an icon or label)
+
+
