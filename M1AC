@@ -195,6 +195,56 @@ overflow: scroll	Scrollbar always shown
 overflow: hidden	Content hidden if overflowed
 overflow: visible or initial	Content overflows freely (default)
 
+Of course! Let’s go through your CSS step-by-step:
+
+css
+Copy code
+div.m-d-table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    margin: 0;
+}
+What each line means:
+Line	Meaning
+width: 100%;	The div takes up 100% of its parent’s width.
+display: table;	This makes the div behave like an HTML <table>, not a normal block element.
+border-collapse: collapse;	If there are any "table-like borders" inside, they will collapse together (no double borders).
+margin: 0;	Removes any outside spacing around the div.
+In simple words:
+You are styling a <div> to act like a table.
+
+It stretches full width.
+
+If you add "rows" and "cells" (using display: table-row, display: table-cell on children), they will behave just like a real <table>.
+
+Borders between cells will merge instead of being separated.
+
+Small Example:
+html
+Copy code
+<div class="m-d-table">
+  <div style="display: table-row;">
+    <div style="display: table-cell; border: 1px solid black;">Row 1, Cell 1</div>
+    <div style="display: table-cell; border: 1px solid black;">Row 1, Cell 2</div>
+  </div>
+  <div style="display: table-row;">
+    <div style="display: table-cell; border: 1px solid black;">Row 2, Cell 1</div>
+    <div style="display: table-cell; border: 1px solid black;">Row 2, Cell 2</div>
+  </div>
+</div>
+✅ Here, even though it's made of <div>s, it behaves like a real table!
+
+Why use div as table instead of <table>?
+
+More flexible for styling with CSS.
+
+Easier to integrate with other layouts like Flexbox/Grid.
+
+Good for dynamic data where you build "table-like" structures manually.
+
+
+
 
 
 
