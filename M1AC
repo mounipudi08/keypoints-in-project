@@ -349,4 +349,6 @@ Exactly at the center vertically.
 
 ✅ Keep all the text on one single line — no matter how long it becomes.
 
-
+Method	Meaning	Displayed on screen?
+Using <span> (like lb標準_マルチライン_左詰)	Real visible text inside HTML	✅ YES, user can see
+Using name="備考" attribute on <div>	HTML attribute (for backend/JavaScript)	❌ NO, not directly visible
