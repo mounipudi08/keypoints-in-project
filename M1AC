@@ -243,7 +243,81 @@ Easier to integrate with other layouts like Flexbox/Grid.
 
 Good for dynamic data where you build "table-like" structures manually.
 
+Awesome! Let's do a clear and easy comparison between display: table and display: flex:
 
+📋 display: table
+The parent (div.m-d-table) behaves like a <table>.
+
+Children must have display: table-row (like <tr>) and display: table-cell (like <td>).
+
+Layout is strict: rows and cells align automatically (like real tables).
+
+Widths are shared naturally, height adjusts based on tallest cell in a row.
+
+Harder to "wrap" elements (no flexible wrapping like Flexbox).
+
+✅ Good for: table-like structures where you want automatic column and row alignment without much CSS.
+
+📋 display: flex
+The parent becomes a flex container.
+
+Children are flex items that can move, stretch, shrink easily.
+
+Very flexible:
+
+Align horizontally (flex-direction: row) or vertically (flex-direction: column).
+
+Easy wrapping with flex-wrap: wrap.
+
+Full control over spacing (gap), alignment (justify-content, align-items).
+
+You manually control size and spacing.
+
+✅ Good for: modern layouts like menus, cards, responsive grids, toolbars, etc.
+
+display: table-row-group
+It makes the element behave like a <tbody> in a normal HTML <table>.
+
+It's usually used inside a display: table container.
+
+It groups table rows (table-row) together.
+
+Does not show visually different by itself, but helps structure complex tables better.
+
+Now let’s clearly understand what's happening with your <div class="m-d-row m-d-col-span">.
+
+🧠 What is happening?
+When you add the m-d-row m-d-col-span class:
+
+The layout becomes cleaner (the boxes are more aligned like a proper "row" and "columns").
+
+It looks more like a full-width section with better height matching across cells.
+
+When you remove that class:
+
+The cells lose that organized row structure.
+
+Some borders appear misaligned or broken.
+
+🔥 What does m-d-row m-d-col-span probably mean?
+m-d-row
+
+Makes the container behave like a row (display: table-row or display: flex row).
+
+Ensures that child elements line up horizontally, like a table row or flexbox row.
+
+m-d-col-span
+
+Likely allows this div to span across multiple columns.
+
+Maybe it sets the width: 100% or grid-column: span X if you are using a grid system.
+
+It ensures the div is treated as one full-width block instead of breaking into smaller pieces.
+
+📷 Visual quick explanation:
+Class Status	Behavior
+❌ No m-d-row m-d-col-span	Normal div behavior → no structure, messy borders
+✅ With m-d-row m-d-col-span	Acts like a proper table row → clean alignment, proper border merging
 
 
 
