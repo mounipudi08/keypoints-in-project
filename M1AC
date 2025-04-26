@@ -190,6 +190,11 @@ Edit
 }
 
 
+overflow: auto	Scrollbar appears if needed
+overflow: scroll	Scrollbar always shown
+overflow: hidden	Content hidden if overflowed
+overflow: visible or initial	Content overflows freely (default)
+
 
 
 
