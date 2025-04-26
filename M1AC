@@ -92,4 +92,58 @@ HTML Element	Behavior
 
 <span> is inline → it stays in the same line.
 
-That’s why I told you: replace <hr> with <span> for the vertica
+That’s why I told you: replace <hr> with <span> for the vertical
+
+Alright!
+Here's what display: inline-flex; means:
+
+inline-flex makes the element behave like an inline element (so it flows inside text or next to other inline elements).
+
+At the same time, it becomes a flex container, meaning its children can be arranged using flex properties (flex-direction, justify-content, etc.).
+
+In simple words:
+It doesn't take the whole line (unlike flex which acts like a block by default).
+
+But inside, it still behaves like a flexbox (you can control the layout of the children).
+
+Example:
+html
+Copy
+Edit
+<div style="display: inline-flex; gap: 10px;">
+  <button>Button 1</button>
+  <button>Button 2</button>
+</div>
+<span>Next to buttons</span>
+
+Good question! Let’s break down display: inline-block; simply:
+
+inline-block makes the element flow like inline elements (it sits next to other elements, not breaking into a new line).
+
+But it can have width and height set (unlike normal inline elements).
+
+In short:
+inline = can't set width/height easily, flows with text
+
+block = starts on a new line, can set width/height
+
+inline-block = flows like inline, but behaves like block (you can set width/height)
+
+Example:
+html
+Copy
+Edit
+<div style="display: inline-block; width: 150px; height: 100px; background: lightblue;">
+  Box 1
+</div>
+<div style="display: inline-block; width: 150px; height: 100px; background: lightgreen;">
+  Box 2
+</div>
+✅ These two boxes will sit side-by-side, not stacked.
+
+Compared to inline-flex:
+inline-block just holds normal content (no flex magic inside).
+
+inline-flex arranges child elements with flexbox rules inside.
+
+
