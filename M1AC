@@ -320,6 +320,20 @@ Class Status	Behavior
 ✅ With m-d-row m-d-col-span	Acts like a proper table row → clean alignment, proper border merging
 
 
+Good question! Let’s break it down super simply:
 
+📋 What does the title attribute do?
+In your code:
+
+html
+Copy code
+<span class="lbヘルプアイコン" title="共用先の装置を入力してください。">
+</span>
+✅ The title="共用先の装置を入力してください。" is tooltip text.
+
+👉 When the user hovers their mouse over this <span>,
+a small pop-up box appears showing:
+「共用先の装置を入力してください。」
+(Translation: "Please enter the shared destination device.")
 
 
