@@ -146,4 +146,51 @@ inline-block just holds normal content (no flex magic inside).
 
 inline-flex arranges child elements with flexbox rules inside.
 
+Is there any possiblility i don't want scroll bar when i can see the screen 
+design fully , i want scroll bar when i am not see screen design fully
+when i am using only overflow:auto the scroll bar is visible when i am able to see full screen design(maximize screen)
+
+Ahh, I understand your problem now — you're saying:
+
+Even when you maximize the screen and can see all the content,
+
+The scrollbar is still visible with just overflow: auto;.
+
+👉 You want the scrollbar to appear only when the content really overflows, otherwise no scrollbar at all.
+
+This usually happens because of small reasons like:
+
+Some small margin, padding, or border on the body or html.
+
+The element (.wrapper) is slightly taller or wider than the viewport (even 1px!).
+
+vh unit issues (like height: 100vh not perfectly matching screen size because of browser toolbars, especially on mobile or Mac).
+
+How to fix it properly:
+✅ 1. Make sure html and body are perfectly 100% height and no margin:
+
+css
+Copy
+Edit
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Important to avoid double scrollbars */
+}
+✅ 2. Then for your .wrapper, do:
+
+css
+Copy
+Edit
+.wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: auto; /* This will now behave correctly */
+}
+
+
+
+
+
 
