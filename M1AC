@@ -342,4 +342,11 @@ Not stuck at the top,
 Not stuck at the bottom,
 Exactly at the center vertically.
 
+ What white-space: nowrap; means
+✅ It tells the browser:
+
+"Do not break the text into a new line, even if it's very long."
+
+✅ Keep all the text on one single line — no matter how long it becomes.
+
 
