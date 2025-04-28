@@ -382,3 +382,7 @@ With overflow: hidden; → the image gets clipped at 100px height.
 For the <body>, even with overflow: visible, browsers usually allow scrolling if the full page needs it.
 
 visible is great if you want things like popups, tooltips, or dropdowns extending outside their parent.
+
+position: relative → allows fine-tuning the icon's vertical position
+
+top: -3px → moves up
