@@ -352,3 +352,8 @@ Exactly at the center vertically.
 Method	Meaning	Displayed on screen?
 Using <span> (like lb標準_マルチライン_左詰)	Real visible text inside HTML	✅ YES, user can see
 Using name="備考" attribute on <div>	HTML attribute (for backend/JavaScript)	❌ NO, not directly visible
+
+margin: 0;	Removes all the default outside space around the body. No outer margin.
+padding: 0;	Removes all the inside space inside the body. No inner padding.
+height: 100%;	Makes the body’s height 100% of the viewport (browser window height).
+overflow: hidden;	Hides any scrollbars. Even if content goes outside the body, no scrollbars will appear.
