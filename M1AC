@@ -357,3 +357,28 @@ margin: 0;	Removes all the default outside space around the body. No outer margi
 padding: 0;	Removes all the inside space inside the body. No inner padding.
 height: 100%;	Makes the body’s height 100% of the viewport (browser window height).
 overflow: hidden;	Hides any scrollbars. Even if content goes outside the body, no scrollbars will appear.
+
+overflow: visible;
+Property	Meaning
+overflow: visible;	Default behavior. If the content inside an element is bigger than its container, it will spill out and still be visible.
+🎯 So if you set:
+html
+Copy code
+<body style="overflow: visible;">
+The body will show any extra content.
+
+Scrollbars will NOT automatically appear for the <body>.
+
+Content can "leak" outside the visible window if you're not careful.
+
+📋 Example:
+Suppose you have a small <div> with height: 100px but inside it, you put a 500px-tall image:
+
+With overflow: visible; → the image sticks out from the div.
+
+With overflow: hidden; → the image gets clipped at 100px height.
+
+⚡ Note:
+For the <body>, even with overflow: visible, browsers usually allow scrolling if the full page needs it.
+
+visible is great if you want things like popups, tooltips, or dropdowns extending outside their parent.
