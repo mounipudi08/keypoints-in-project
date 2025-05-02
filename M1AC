@@ -385,4 +385,12 @@ visible is great if you want things like popups, tooltips, or dropdowns extendin
 
 position: relative → allows fine-tuning the icon's vertical position
 
+.lbヘルプアイコン::before {
+    content: url(../img/icons/i_help_b.gif);
+    display: inline-block; /* or 'block' if you want it on its own line */
+    margin-right: 10px;
+    margin-bottom: 5px; /* this will now take effect */
+    vertical-align: middle;
+}
+
 top: -3px → moves up
