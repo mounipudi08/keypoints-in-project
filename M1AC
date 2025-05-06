@@ -394,3 +394,26 @@ position: relative → allows fine-tuning the icon's vertical position
 }
 
 top: -3px → moves up
+This CSS snippet applies styles to certain HTML elements, specifically targeting <div> elements that are children of elements with the classes .m-d-row and .m-d-tbody. Here's a breakdown of what each part means:
+
+css
+Copy
+Edit
+.m-d-row > div,
+.m-d-tbody > div {
+  margin: 5px;
+  padding: 5px;
+}
+Explanation:
+.m-d-row > div: This selects all <div> elements that are direct children of an element with the class m-d-row.
+
+.m-d-tbody > div: Similarly, this selects all <div> elements that are direct children of an element with the class m-d-tbody.
+
+For both selections:
+
+margin: 5px; adds 5 pixels of space outside the element on all sides (top, right, bottom, left), creating space between it and surrounding elements.
+
+padding: 5px; adds 5 pixels of space inside the element on all sides, between the content and the element's border.
+
+Purpose:
+This rule ensures consistent spacing around and inside the child <div> elements inside .m-d-row and .m-d-tbody, likely for layout and readability purposes.
