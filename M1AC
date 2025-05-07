@@ -679,6 +679,26 @@ To nudge elements slightly without removing them from the document flow.
 
 To act as a reference point for absolutely positioned child elements (position: absolute uses the nearest relatively or absolutely positioned ancestor as a reference).
 
+You only need to target one or a few specific elements.
+
+You want to safely override class styles without using !important.
+✅ Use an ID (#id) when:
+You need to style or target a single, unique element on the page.
+
+Example: A single header section, a specific button, or a special layout block.
+
+html
+Copy
+Edit
+<div id="mainHeader"></div>
+You want higher specificity to override class-based styles without using !important.
+
+You're using JavaScript to target one element uniquely.
+
+javascript
+Copy
+Edit
+document.getElementById('submitButton');
 
 
 
