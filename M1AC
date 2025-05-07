@@ -656,6 +656,29 @@ Sets a fixed width of 790px for the element.
 
 Combined with the auto margins, this ensures the element will be centered on the page with this width.
 
+position: relative is a CSS property value used to control how an HTML element is positioned on a page. Here's a quick breakdown of how it works:
+
+What position: relative does:
+It positions the element relative to its normal (static) position in the document flow.
+
+If you add properties like top, right, bottom, or left, the element will shift from where it would have normally been placed.
+
+The space originally occupied by the element remains reserved, even if the element is moved.
+
+Example:
+html
+Copy
+Edit
+<div style="position: relative; top: 20px; left: 30px;">
+  I moved 20px down and 30px to the right.
+</div>
+This <div> will appear 20px lower and 30px to the right of where it would normally appear.
+
+Why use it?
+To nudge elements slightly without removing them from the document flow.
+
+To act as a reference point for absolutely positioned child elements (position: absolute uses the nearest relatively or absolutely positioned ancestor as a reference).
+
 
 
 
